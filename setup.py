@@ -11,8 +11,8 @@ setuptools.setup(
                    that feed images to a v4l2loopback device""",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    license="(GPL-3)"
-    url="",
+    license="(GPL-3)",
+    url="https://github.com/Flashs/virtualvideo",
     packages=setuptools.find_packages(),
     classifiers=[
         "v4l2loopback",
