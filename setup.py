@@ -11,12 +11,15 @@ setuptools.setup(
                    that feed images to a v4l2loopback device""",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    license="(GPL-3)",
+    license="GPLv3",
     url="https://github.com/Flashs/virtualvideo",
     packages=setuptools.find_packages(),
     classifiers=[
-        "v4l2loopback",
-        "ffmpeg",
+        "Development Status :: 3 - Alpha",
+        "Environment :: Console",
+        "Topic :: System :: Operating System Kernels :: Linux",
+        "Topic :: Multimedia :: Video :: Display",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     ],
     install_requires=[
           'ffmpeg-python',
