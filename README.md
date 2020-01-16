@@ -1,15 +1,19 @@
 # VirtualVideo
 VirtualVideo allows you to write simple programs that feed images to a v4l2loopback device.
-## Guide
-```pip3 install --user virtualvideo```
-
 ## Prerequisites 
 * [v4l2loopback](https://github.com/umlaeute/v4l2loopback)
 * ffmpeg 
 
-## Example
-Checkout the [example](examples/showFish.py) for the code.
+## Guide
+Install virtualvideo with: 
+```pip3 install --user virtualvideo```
 
+Install ffmpeg(preferably with your systems packagemanager) and v4l2loopback. Installing v4l2loopback can be tricky and i suggest using ```dkms``` to install/build it. (If you're using Arch-Linux theres an AUR Package for you: [v4l2loopback-dkms](https://aur.archlinux.org/packages/v4l2loopback-dkms/)).
+
+## Example
+[showFish.py](examples/showFish.py) shows how to use the virtualvideo package.
+
+### Running the Example
 To run the example:
 ```
 $ sudo modprobe v4l2loopback video_nr=XX exclusive_caps=1
@@ -18,9 +22,9 @@ $ python3 showFish.py
 ```
 Then you should be able to open/view the webcam for example with vlc (or on webcamtest.com).
 You then should see a red goldfish getting blurred and unblurred. 
-See the [gif](examples/README.md)
+See [example/README.md](examples/README.md) for a gif.
 
-## F.A.Q.:
+## Errorhandling:
 * Check if the user is allowed to access the device, otherwise change permissions of ```/dev/videoXX```
 
 * Use following code to check if ffmpeg is working properly
