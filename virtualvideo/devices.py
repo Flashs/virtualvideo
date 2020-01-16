@@ -58,7 +58,7 @@ class FakeVideoDevice():
                                   video_size=vid_source.img_size(),
                                   framerate=vid_source.fps())
 
-    def init_output(self, dev_nr, camx=1280, camy=720, fps=30,pix_fmt="YUV420p"):
+    def init_output(self, dev_nr, camx=1280, camy=720, fps=30,pix_fmt="yuv420p"):
         """
         Initialises the output for the device
 
