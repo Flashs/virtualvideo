@@ -4,7 +4,7 @@ import cv2
 
 class MyVideoSource(virtualvideo.VideoSource):
     def __init__(self):
-        self.img = cv2.imread("fish.png")
+        self.img = cv2.imread("fish.jpg")
         size = self.img.shape
         #opencv's shape is y,x,channels
         self._size = (size[1],size[0])

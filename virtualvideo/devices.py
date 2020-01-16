@@ -92,9 +92,11 @@ class FakeVideoDevice():
 
     def __delay_til_next_frame(self):
         """delays reading of the next frame to match ingoing fps"""
-        timediff = (time.time_ns() - self.last_frame_time) / 1_000_000_000
+        timediff = (time.time() - self.last_frame_time)
+        
         time.sleep(max((1 / self.vid_source.fps() - timediff), 0))
-        self.last_frame_time = time.time_ns()
+        
+        self.last_frame_time = time.time()
 
     def stop(self):
         """
