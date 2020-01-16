@@ -18,7 +18,9 @@ $ python3 showFish.py
 ```
 Then you should be able to open/view the webcam for example with vlc (or on webcamtest.com).
 You then should see a red goldfish getting blurred and unblurred. 
+
 ![BlurredFish.gif](examples/VirtualVideo.gif)
+
 ## F.A.Q.:
 * Check if the user is allowed to access the device, otherwise change permissions of ```/dev/videoXX```
 
