@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="virtualvideo", # Replace with your own username
-    version="0.1.4",
+    version="0.1.5",
     author="Flashs",
     description="""virtualvideo allows you to write simple programs
                    that feed images to a v4l2loopback device""",
