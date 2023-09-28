@@ -127,12 +127,16 @@ class FakeVideoDevice():
         img_gen = self.vid_source.generator()
 
         while self.running:
-            image = next(img_gen).astype(np.uint8)
+            raw_image = next(img_gen)
+            image = None
+
+            if not raw_image is None:
+                image = raw_image.astype(np.uint8)
 
             if image is None:
                 self.ffmpeg_proc.terminate()
                 self.running = False
-                break
+                break        
 
             self.ffmpeg_proc.stdin.write(image.tobytes())
 
